@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-users
+      author: John Bouma
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
